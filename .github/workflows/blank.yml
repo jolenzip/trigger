@@ -23,7 +23,7 @@ jobs:
       - name: Invoke workflow in another repo with inputs
         uses: benc-uk/workflow-dispatch@v1
         with:
-          workflow: my-workflow.yaml
+          workflow: blank.yaml
           repo: jolenzip/receiver
           inputs: '{ "message": "blah blah", "something": false }'
           # Required when using the `repo` option. Either a PAT or a token generated from the GitHub app or CLI
