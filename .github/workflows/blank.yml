@@ -27,4 +27,4 @@ jobs:
           repo: jolenzip/receiver
           inputs: '{ "message": "blah blah", "something": false }'
           # Required when using the `repo` option. Either a PAT or a token generated from the GitHub app or CLI
-          token: "${{ secrets.MY_TOKEN }}"
+          token: "${{ secrets.My_Secret }}"
