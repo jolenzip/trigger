@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Invoke workflow in another repo with inputs
-        if: ${{ inputs.dispatch_type }} == 'workflow_dispatch'
+        if: inputs.dispatch_type == 'workflow_dispatch'
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: receiving_workflow
@@ -26,7 +26,7 @@ jobs:
           token: "${{ secrets.My_Secret }}"
 
       - name: Trigger Workflow in Another Repository
-        if: ${{ inputs.dispatch_type }} == 'repository_dispatch'
+        if: inputs.dispatch_type == 'repository_dispatch'
         run: |
           message="blabla"
           something="other"
